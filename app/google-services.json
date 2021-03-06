@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "758045541034",
+    "project_id": "milliongame-5f1fa",
+    "storage_bucket": "milliongame-5f1fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758045541034:android:96b63823adaabd9b6b86d3",
+        "android_client_info": {
+          "package_name": "com.firstmil.milliongame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758045541034-s4ed5rkc5o18c2u0dkrpf8d43g20ufjt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqUIoJeRZKDUd-fUwYv_aFMK9sf35ywHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758045541034-s4ed5rkc5o18c2u0dkrpf8d43g20ufjt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
