@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/scrinas"
+    android:padding="16dp"
+    tools:context="com.firstmil.milliongame.MainActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/text_view_highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/img"
+        android:text="Максимальный выигрыш: 0₽"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/holo_green_light"/>
+
+    <Button
+        android:id="@+id/button_start_quiz"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_highscore"
+        android:layout_margin="15dp"
+
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/but"
+        android:text="Начать игру" />
+
+    <Button
+        android:id="@+id/button_conf"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_start_quiz"
+        android:layout_centerInParent="true"
+        android:background="@drawable/but"
+        android:layout_margin="10dp"
+        android:text="Политика конфиденциальности" />
+
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_conf"
+        android:layout_centerInParent="true"
+        android:background="@drawable/but"
+        android:layout_margin="10dp"
+        android:text="Выйти" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:adUnitId="ca-app-pub-1764272666537420/3233352599"
+        app:adSize="BANNER"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
