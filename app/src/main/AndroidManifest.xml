@@ -13,15 +13,10 @@
         android:name=".MyAnalitics"
         android:theme="@style/AppTheme">
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1764272666537420~9966297813"/>
-
-
         <activity
             android:name=".QuizMilActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"

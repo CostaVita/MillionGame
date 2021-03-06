@@ -20,11 +20,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
@@ -36,8 +31,7 @@ public class QuizMilActivity extends AppCompatActivity {
     private AlertDialog dialogFail;
     public static final String EXTRA_SCORE = "extraScore";
     private static final long COUNTDOWN_IN_MILLIS = 30000;
-    private InterstitialAd mInterstitialAd;
-    MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
 
     private static final String KEY_SCORE = "keyScore";
     private static final String KEY_QUESTION_COUNT = "keyQuestionCount";
@@ -297,8 +291,6 @@ public class QuizMilActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                showInterstitialAd();
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(QuizMilActivity.this);
                 builder.setCancelable(false);
                 builder.setTitle("Вы проиграли!");
@@ -329,8 +321,6 @@ public class QuizMilActivity extends AppCompatActivity {
 
                 posiviveButton.setTextColor(Color.parseColor("#07680A"));
                 posiviveButton.setLayoutParams(positiveButtonLL);
-
-
             }
         }.start();
 
@@ -349,37 +339,7 @@ public class QuizMilActivity extends AppCompatActivity {
         decimalFormatSymbols.setGroupingSeparator(' ');
 
         df.setDecimalFormatSymbols(decimalFormatSymbols);
-        String sample = df.format(score);
-        return sample;
-    }
-
-    private void showInterstitialAd(){
-        mInterstitialAd = new InterstitialAd(QuizMilActivity.this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-1764272666537420/7842040813");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd.setAdListener(new AdListener(){
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-            }
-
-            @Override
-            public void onAdFailedToLoad(int i) {
-                super.onAdFailedToLoad(i);
-            }
-
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-
-
-                }else{
-                    Toast.makeText(QuizMilActivity.this, "Sorry, no ad",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        return df.format(score);
     }
 
     private void playClickCorrect() {
@@ -425,6 +385,4 @@ public class QuizMilActivity extends AppCompatActivity {
             mediaPlayer = null;
         }
     }
-
-
 }
