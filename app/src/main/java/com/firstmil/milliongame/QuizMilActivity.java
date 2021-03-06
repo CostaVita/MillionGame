@@ -20,6 +20,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.startapp.sdk.adsbase.StartAppAd;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
@@ -291,6 +293,7 @@ public class QuizMilActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                StartAppAd.showAd(QuizMilActivity.this);
                 AlertDialog.Builder builder = new AlertDialog.Builder(QuizMilActivity.this);
                 builder.setCancelable(false);
                 builder.setTitle("Вы проиграли!");

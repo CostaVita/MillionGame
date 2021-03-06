@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.startapp.sdk.adsbase.StartAppAd;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements Animation.Animati
     private void startQuiz() {
         Intent intent = new Intent(MainActivity.this, QuizMilActivity.class);
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
+        StartAppAd.showAd(this);
     }
 
     @Override
