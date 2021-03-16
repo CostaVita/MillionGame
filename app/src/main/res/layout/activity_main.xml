@@ -60,4 +60,16 @@
         android:layout_margin="10dp"
         android:text="Выйти" />
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:adUnitId="ca-app-pub-1764272666537420/3233352599"
+        app:adSize="BANNER"
+        android:layout_alignParentBottom="true"/>
+
 </RelativeLayout>
